@@ -38,6 +38,14 @@ else if (pokemon is not null)
         <table>
             <th>Stat</th>
         </table>
+        <tbody>
+            @foreach (PokemonStat info in pokemon.Stats) 
+            {
+                <tr>
+                    @info.Stat.Name
+                </tr>
+            }
+        </tbody>
     </div>
 }
 
