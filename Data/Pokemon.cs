@@ -19,6 +19,9 @@ namespace pokemon_project.Data
         [JsonPropertyName("types")]
         public List<PokemonTypeSlot> Types { get; set; } = new();
 
+        [JsonPropertyName("stats")]
+        public List<PokemonStat> Stats { get; set; } = new();
+
     }
 
     public class PokemonTypeSlot
@@ -31,6 +34,15 @@ namespace pokemon_project.Data
     {
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
+    }
+
+    public class PokemonStat
+    {
+        [JsonPropertyName("base_stat")]
+        public int BaseStat { get; set; }
+
+        [JsonPropertyName("stat")]
+        public NamedApiResource Stat { get; set; } = new();
     }
 
 }
