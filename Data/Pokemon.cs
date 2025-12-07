@@ -22,6 +22,9 @@ namespace pokemon_project.Data
         [JsonPropertyName("stats")]
         public List<PokemonStat> Stats { get; set; } = new();
 
+        [JsonPropertyName("sprites")]
+        public Sprites Sprites { get; set; } = new();
+
     }
 
     public class PokemonTypeSlot
@@ -43,6 +46,12 @@ namespace pokemon_project.Data
 
         [JsonPropertyName("stat")]
         public NamedApiResource Stat { get; set; } = new();
+    }
+
+    public class Sprites
+    {
+        [JsonPropertyName("front_default")]
+        public string? FrontDefault { get; set; }
     }
 
 }
