@@ -1,0 +1,35 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache/options
+.vs/
+
+# Generated Blazor assets
+wwwroot/_framework/*.dll
+wwwroot/_framework/*.wasm
+wwwroot/_framework/*.json
+wwwroot/_framework/*.gz
+wwwroot/_framework/*.br
+
+# Publish output
+wwwroot/*
+!wwwroot/index.html
+!wwwroot/appsettings*.json
+
+# Logs
+*.log
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Other
+node_modules/
+*.cache
