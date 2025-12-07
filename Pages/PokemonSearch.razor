@@ -1,4 +1,5 @@
 @page "/pokemon"
+@using System.Reflection.Metadata
 @using pokemon_project.Data
 @inject PokemonService PokemonService
 
@@ -19,6 +20,7 @@
 
     <p><strong>Height:</strong> @pokemon.Height</p>
     <p><strong>Weight:</strong> @pokemon.Weight</p>
+    <p><strong>Types:</strong> @string.Join(separator: ", ", pokemon.Types.Select(t => t.Type.Name))</p>
 </div>
 
 

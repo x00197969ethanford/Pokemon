@@ -16,5 +16,21 @@ namespace pokemon_project.Data
         [JsonPropertyName("weight")]
         public int Weight { get; set; }
 
+        [JsonPropertyName("types")]
+        public List<PokemonTypeSlot> Types { get; set; } = new();
+
     }
+
+    public class PokemonTypeSlot
+    {
+        [JsonPropertyName("type")]
+        public NamedApiResource Type { get; set; } = new NamedApiResource();
+    }
+
+    public class NamedApiResource
+    {
+        [JsonPropertyName("name")]
+        public string Name { get; set; } = string.Empty;
+    }
+
 }
