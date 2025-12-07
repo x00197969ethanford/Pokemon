@@ -18,7 +18,7 @@ namespace pokemon_project.Data
             if (string.IsNullOrWhiteSpace(nameOrId))
             {
                 return null;
-            } 
+            }
 
             nameOrId = nameOrId.ToLower().Trim();
 
@@ -30,6 +30,11 @@ namespace pokemon_project.Data
             {
                 return null;
             }
+        }
+        
+        public int GetRandomId()
+        {
+            return new Random().Next(1, 898); // There are 898 pokemon
         }
     }
 }
