@@ -4,6 +4,22 @@
 
 <h3>Find Your Pokémon Twin</h3>
 
+<div class="card p-3 mb-3">
+    <div class="mb-2">
+        <label>Your Height</label>
+        
+        <!-- Input cm -->
+        <div class="d-flex gap-2">           
+            <InputNumber @bind-Value="heightCm" />
+            <small>Feet</small>
+        </div>
+
+    </div>
+
+</div>
+
+
+
 @code {
-    
+    double heightCm;
 }
