@@ -14,17 +14,33 @@
     <button class="btn btn-secondary">Random</button>
 </div>
 
-<!-- Display -->
-<div class="card p-3">
-    <h4 class="text-capitalize">@pokemon.Name (@pokemon.Id)</h4>
+<!-- Handle error and empty -->
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (!string.IsNullOrEmpty(error))
+{
+    <div class="alert alert-danger">@error</div>
+}
+else if (pokemon is not null)
+{
+    <!-- Display -->
+    <div class="card p-3">
+        <h4 class="text-capitalize">@pokemon.Name (@pokemon.Id)</h4>
 
-    <p><strong>Height:</strong> @pokemon.Height</p>
-    <p><strong>Weight:</strong> @pokemon.Weight</p>
-    <p><strong>Types:</strong> @string.Join(separator: ", ", pokemon.Types.Select(t => t.Type.Name))</p>
-</div>
+        <p><strong>Height:</strong> @pokemon.Height</p>
+        <p><strong>Weight:</strong> @pokemon.Weight</p>
+        <p><strong>Types:</strong> @string.Join(separator: ", ", pokemon.Types.Select(t => t.Type.Name))</p>
+    </div>
+}
+
 
 
 @code {
     Pokemon? pokemon;
+    bool isLoading = false;
+    string error = "no pokemon found";
+    
 
 }
