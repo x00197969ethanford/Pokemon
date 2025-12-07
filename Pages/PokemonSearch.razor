@@ -8,7 +8,7 @@
 
 <!-- Search box -->
 <div class="card p-3 mb-3">
-    <input @bind="searchText" placeholder="Enter Pokemon name or ID..." />
+    <input @bind="searchText" class="form-control mb-2" placeholder="Enter Pokemon name or ID..." />
 
     <button class="btn btn-primary" @onclick="Search">Search</button>
     <button class="btn btn-secondary" @onclick="RandomPokemon">Random</button>
@@ -32,6 +32,12 @@ else if (pokemon is not null)
         <p><strong>Height:</strong> @pokemon.Height</p>
         <p><strong>Weight:</strong> @pokemon.Weight</p>
         <p><strong>Types:</strong> @string.Join(separator: ", ", pokemon.Types.Select(t => t.Type.Name))</p>
+
+        <h5>Pokemon Info</h5>
+        <!-- Sheet of stats -->
+        <table>
+            <th>Stat</th>
+        </table>
     </div>
 }
 
