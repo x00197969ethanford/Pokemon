@@ -35,17 +35,23 @@ else if (pokemon is not null)
 
         <h5>Pokemon Info</h5>
         <!-- Sheet of stats -->
-        <table>
-            <th>Stat</th>
-        </table>
-        <tbody>
-            @foreach (PokemonStat info in pokemon.Stats) 
-            {
+        <table class="table table-striped table-sm">
+            <thead>
                 <tr>
-                    @info.Stat.Name
+                    <th>Stat</th>
+                    <th>Value</th>
                 </tr>
-            }
-        </tbody>
+            </thead>    
+            <tbody>
+                @foreach (PokemonStat info in pokemon.Stats) 
+                {
+                    <tr>
+                        <td>@info.Stat.Name</td>
+                        <td>@info.BaseStat</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 }
 
