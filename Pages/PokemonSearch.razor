@@ -38,9 +38,29 @@ else if (pokemon is not null)
 
 
 @code {
+    string searchText = "";
     Pokemon? pokemon;
     bool isLoading = false;
-    string error = "no pokemon found";
+    string? error = null;
     
+    private async Task Search()
+    {
+        error = null;
+        pokemon = null;
+        isLoading = true;
+
+        Pokemon? result = await PokemonService.GetPokemonAsync(searchText);
+
+        isLoading = false;
+
+        if (result is null)
+        {
+            error = "Pokémon not found.";
+        }
+        else
+        {
+            pokemon = result;
+        }
+    }
 
 }
