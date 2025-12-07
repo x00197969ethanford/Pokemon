@@ -11,7 +11,7 @@
     <input @bind="searchText" placeholder="Enter Pokemon name or ID..." />
 
     <button class="btn btn-primary" @onclick="Search">Search</button>
-    <button class="btn btn-secondary">Random</button>
+    <button class="btn btn-secondary" @onclick="RandomPokemon">Random</button>
 </div>
 
 <!-- Handle error and empty -->
@@ -63,4 +63,10 @@ else if (pokemon is not null)
         }
     }
 
+    private async Task RandomPokemon()
+    {
+        searchText = PokemonService.GetRandomId().ToString();
+        await Search();
+    }
+    
 }
