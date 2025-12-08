@@ -52,4 +52,15 @@ else if (bestMatch != null)
     string? error = null;
 
     Pokemon? bestMatch;
+    private async Task FindMatch()
+    {
+        error = null;
+        bestMatch = null;
+
+        isLoading = true;
+
+        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync();
+
+        isLoading = false;
+    }
 }
