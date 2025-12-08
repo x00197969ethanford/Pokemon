@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "pokemon_project",
   "resources": {
-    "hash": "sha256-UwReDqkFKRoKs/h2ggk1V0BcJwwA03Kvt4cIUVIUcIU=",
+    "hash": "sha256-ketj+cWe8Id140CYpuZZUR1pnvGf/4Gs8hphiqPWqnA=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.ncni7t944m.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.uyuitmimef.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -39,13 +39,13 @@
       "System.Private.Uri.6szf0be0ev.wasm": "System.Private.Uri.wasm",
       "System.Runtime.InteropServices.JavaScript.u9tzo6t7zm.wasm": "System.Runtime.InteropServices.JavaScript.wasm",
       "System.Runtime.Serialization.Primitives.3zvl3n6b03.wasm": "System.Runtime.Serialization.Primitives.wasm",
-      "System.Runtime.0smm70vel7.wasm": "System.Runtime.wasm",
+      "System.Runtime.fpijxv804a.wasm": "System.Runtime.wasm",
       "System.Text.Encodings.Web.dvi1t3okep.wasm": "System.Text.Encodings.Web.wasm",
       "System.Text.Json.1t4n5hye0r.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.k8ibga7wut.wasm": "System.Text.RegularExpressions.wasm",
       "System.t4d4s3f398.wasm": "System.wasm",
-      "System.Private.CoreLib.6pk4gie26t.wasm": "System.Private.CoreLib.wasm",
-      "pokemon_project.nmxjjytxmj.wasm": "pokemon_project.wasm",
+      "System.Private.CoreLib.6hymny8fpf.wasm": "System.Private.CoreLib.wasm",
+      "pokemon_project.oersya0wbs.wasm": "pokemon_project.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.noby4tlk4d.js": "dotnet.native.js",
       "dotnet.native.qe75a9vfqn.wasm": "dotnet.native.wasm",
@@ -70,7 +70,7 @@
     },
     "coreAssembly": {
       "System.Runtime.InteropServices.JavaScript.u9tzo6t7zm.wasm": "sha256-8v7jVijrzRlaTmvdds4+ZNyPL5DYfnYnzFYT2HtkqwM=",
-      "System.Private.CoreLib.6pk4gie26t.wasm": "sha256-NsYp5d5gkRLVLk2B8JYJ18vx9JM1Obcw2n1OV3GoZoo="
+      "System.Private.CoreLib.6hymny8fpf.wasm": "sha256-9iiFNKbKRY6O0EbzbWwkWyV2LAvUwjj3ozhoJA9NxT8="
     },
     "assembly": {
       "Microsoft.AspNetCore.Components.ncni7t944m.wasm": "sha256-t9ExIQLlWA5c85WmyRfoLuCUPuv2NTEFYS04DNSnb2Y=",
@@ -108,12 +108,12 @@
       "System.ObjectModel.d1jsvxs1nm.wasm": "sha256-nw0PWkIQZXTGxgO+iLoQP1ElvmA+mG5ZK8AlzdKuPj4=",
       "System.Private.Uri.6szf0be0ev.wasm": "sha256-GrHSOYa7S+DbZwR4A5lc2FFne90lU5YbMHztu5rfbWc=",
       "System.Runtime.Serialization.Primitives.3zvl3n6b03.wasm": "sha256-4av7FPnozHHSXZ/NOWa+QVjZq9gokeCpvTOk1T5i96c=",
-      "System.Runtime.0smm70vel7.wasm": "sha256-0PPuJage5uM1sOz/9ngTWBYXlVLwL7u6L7YHoKO/nUY=",
+      "System.Runtime.fpijxv804a.wasm": "sha256-jf0VYnm05haiGyeCMXIW/Ou2risFQopcySRTtg+Gg28=",
       "System.Text.Encodings.Web.dvi1t3okep.wasm": "sha256-N0H/XiI7CqSVWRBwOAksJI9mQ1UaYSw6kuREMzV/aw8=",
       "System.Text.Json.1t4n5hye0r.wasm": "sha256-697muDAW58yUXAYr4kbn5vKs7pv2JcWOdVPSMrCJovc=",
       "System.Text.RegularExpressions.k8ibga7wut.wasm": "sha256-7OYvLuFLvwbax++2u+uoDmoaX8o/Q8wcYJC92eP1YjA=",
       "System.t4d4s3f398.wasm": "sha256-fVP2BxRRKpBA0PmBbKxmO45bXDrAXVn1GthlDclLbeU=",
-      "pokemon_project.nmxjjytxmj.wasm": "sha256-AQT0OlXADgH/THYPLb1vZhc9U3sk6keoRLwMSBx9HT0="
+      "pokemon_project.oersya0wbs.wasm": "sha256-QLx29JuyZsjtAZY5q6mWGMqRKkuWbIvk6synTLUxozc="
     }
   },
   "cacheBootResources": true,
