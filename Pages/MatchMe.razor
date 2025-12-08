@@ -33,8 +33,15 @@ else if (!string.IsNullOrEmpty(error))
 {
     <div class="alert alert-danger">@error</div>
 }
-else if ()
-{}
+else if (bestMatch != null)
+{
+    <!-- Display -->
+    <div class="card p-3 mb-4">
+        <h4>Your Closest Match:</h4>
+        <strong>Height:</strong>
+        <strong>Weight:</strong>
+    </div>
+}
 
 
 @code {
@@ -43,4 +50,6 @@ else if ()
 
     bool isLoading = false;
     string? error = null;
+
+    Pokemon? bestMatch;
 }
