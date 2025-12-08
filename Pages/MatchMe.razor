@@ -21,7 +21,7 @@
         <InputNumber @bind-Value="weightKg" class="form-control" style="width: 120px"/>
     </div>
 
-    <button class="btn btn-primary">Find My Pokémon</button>
+    <button class="btn btn-primary" @onclick="FindMatch">Find My Pokémon</button>
 </div>
 
 <!-- Handle error and empty -->
@@ -37,9 +37,9 @@ else if (bestMatch != null)
 {
     <!-- Display -->
     <div class="card p-3 mb-4">
-        <h4>Your Closest Match:</h4>
-        <strong>Height:</strong>
-        <strong>Weight:</strong>
+        <h4>Your Closest Match: <span class="text-capitalize">@bestMatch.Name</span></h4>
+        <p><strong>Height:</strong>@(bestMatch.Height * 10) cm</p>
+        <p><strong>Weight:</strong>@(bestMatch.Weight / 10.0) kg</p>
     </div>
 }
 
