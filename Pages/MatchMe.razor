@@ -48,21 +48,23 @@ else if (bestMatch != null)
     <h5>Top 3 Matches</h5>
     <p>The lower the score the closer the match!</p>
 
-    <div>
+    <div class="d-flex flex-wrap gap-3">
         <!-- Display top 3 -->
         @foreach ((Pokemon match, double score) matches in top3)
         {
             <div class="card p-3" style="width: 200px;">
-                <h6>@matches.match.Name</h6>
+                <h6 class="text-capitalize text-center">@matches.match.Name</h6>
 
-                <p>
+                <img src="@matches.match.Sprites.FrontDefault" class="mx-auto d-block" style="width:120px" />
+
+                <p class="text-center mb-1">
                     <strong>Height:</strong> @(matches.match.Height * 10) cm
                 </p>
-                <p>
+                <p class="text-center mb-1">
                     <strong>Weight:</strong> @(matches.match.Weight / 10.0) kg
                 </p>
-                <p>
-                    <strong>Score:</strong> @matches.score
+                <p class="text-center">
+                    <strong>Score:</strong> @matches.score.ToString(format: "0.0")
                 </p>
             </div>
         }
