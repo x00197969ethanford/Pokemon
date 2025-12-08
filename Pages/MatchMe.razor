@@ -61,6 +61,9 @@ else if (bestMatch != null)
 
         List<Pokemon>? list = await PokemonService.GetManyPokemonAsync();
 
+        Pokemon best = PokemonService.FindClosestMatches(list, heightCm, weightKg);
+
+        bestMatch = best;
         isLoading = false;
     }
 }
