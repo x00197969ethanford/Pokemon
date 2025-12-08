@@ -94,10 +94,7 @@ else if (bestMatch != null)
 
 
 @code {
-    double heightFeet;
-    double heightInch;
-    double heightCm => ((heightFeet * 12) + heightInch) * 2.54;
-    double weightKg;
+    double heightCm => ((user.HeightFeet * 12) + user.HeightInches) * 2.54;
 
     bool isLoading = false;
     string? error = null;
