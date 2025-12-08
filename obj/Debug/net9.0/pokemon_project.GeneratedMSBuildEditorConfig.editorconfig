@@ -28,24 +28,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ethan/OneDrive/Documents/OneDrive/2_semester1/App Development/CA3/pokemon_project/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ethan/OneDrive/Documents/OneDrive/2_semester1/App Development/CA3/pokemon_project/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ethan/OneDrive/Documents/OneDrive/2_semester1/App Development/CA3/pokemon_project/Pages/MatchMe.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0Y2hNZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ethan/OneDrive/Documents/OneDrive/2_semester1/App Development/CA3/pokemon_project/Pages/PokemonSearch.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9rZW1vblNlYXJjaC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ethan/OneDrive/Documents/OneDrive/2_semester1/App Development/CA3/pokemon_project/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ethan/OneDrive/Documents/OneDrive/2_semester1/App Development/CA3/pokemon_project/_Imports.razor]
