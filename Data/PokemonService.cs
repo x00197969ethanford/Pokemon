@@ -58,7 +58,7 @@ namespace pokemon_project.Data
             return pokemons;
         }
 
-    public Pokemon FindClosestMatches(List<Pokemon> pokemons, double userHeightCm, double userWeightKg)
+    public (Pokemon best, List<(Pokemon match, double score)> top3) FindClosestMatches(List<Pokemon> pokemons, double userHeightCm, double userWeightKg)
         {
             var maches = pokemons
                 .Select(match =>
@@ -73,8 +73,10 @@ namespace pokemon_project.Data
                 })
                 .OrderBy(s => s.score)
                 .ToList();
+            
+            var best = maches.First().match;
 
-            return maches.First().match;
+            return (best);
         }
     
     }
