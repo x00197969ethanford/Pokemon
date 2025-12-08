@@ -1,27 +1,30 @@
 # Build outputs
 bin/
 obj/
+**/bin/
+**/obj/
 
 # User-specific files
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.rsuser
 
 # Visual Studio cache/options
 .vs/
 
 # Generated Blazor assets
-wwwroot/_framework/*.dll
-wwwroot/_framework/*.wasm
-wwwroot/_framework/*.json
-wwwroot/_framework/*.gz
-wwwroot/_framework/*.br
+**/wwwroot/_framework/*.dll
+**/wwwroot/_framework/*.wasm
+**/wwwroot/_framework/*.json
+**/wwwroot/_framework/*.gz
+**/wwwroot/_framework/*.br
 
 # Publish output
-wwwroot/*
-!wwwroot/index.html
-!wwwroot/appsettings*.json
+**/wwwroot/*
+!**/wwwroot/index.html
+!**/wwwroot/appsettings*.json
 
 # Logs
 *.log
