@@ -102,6 +102,13 @@ else if (bestMatch != null)
     bool isLoading = false;
     string? error = null;
 
+    private UserStats user = new UserStats();
+    private EditContext? editContext;
+    protected override void OnInitialized()
+    {
+        editContext = new EditContext(user);
+    }
+
     Pokemon? bestMatch;
     List<(Pokemon match, double score)> top3 = new List<(Pokemon match, double score)>();
 
