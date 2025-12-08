@@ -65,11 +65,11 @@ else if (bestMatch != null)
 
         isLoading = true;
 
-        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync();
+        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync(count: 100); // 100 faster for testing 
 
-        Pokemon best = PokemonService.FindClosestMatches(list, heightCm, weightKg);
+        (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm, weightKg);
 
-        bestMatch = best;
+        bestMatch = result.best;
         isLoading = false;
     }
 }
