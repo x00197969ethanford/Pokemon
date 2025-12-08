@@ -7,19 +7,27 @@
 <div class="card p-3 mb-3">
     <div class="mb-2">
         <label>Your Height</label>
-        
+
         <!-- Input cm -->
         <div class="d-flex gap-2">           
             <InputNumber @bind-Value="heightCm" />
-            <small>Feet</small>
+            <small>cm</small>
         </div>
 
     </div>
+    <!-- Input weight -->
+    <div class="mb-2">
+        <label>Your Weight (kg)</label>
+        <InputNumber @bind-Value="weightKg" class="form-control" />
+    </div>
 
+    <button class="btn btn-primary">Find My Pokémon</button>
 </div>
 
 
 
 @code {
     double heightCm;
+
+    double weightKg;
 }
