@@ -29,7 +29,10 @@ else if (pokemon is not null)
     <div class="card p-3">
         <h4 class="text-capitalize">@pokemon.Name (@pokemon.Id)</h4>
 
-        <img src="@pokemon.Sprites.FrontDefault" alt="@pokemon.Name" style="width:150px" />
+        @if (!string.IsNullOrEmpty(pokemon.Sprites.FrontDefault))
+        {
+            <img src="@pokemon.Sprites.FrontDefault" alt="@pokemon.Name" style="width:150px" />
+        }
 
         <p><strong>Height:</strong> @pokemon.Height</p>
         <p><strong>Weight:</strong> @pokemon.Weight</p>

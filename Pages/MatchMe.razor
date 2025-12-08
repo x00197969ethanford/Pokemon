@@ -52,7 +52,10 @@ else if (bestMatch != null)
     <div class="card p-3 mb-4">
         <h4>Your Closest Match: <span class="text-capitalize">@bestMatch.Name</span></h4>
 
-        <img src="@bestMatch.Sprites.FrontDefault" style="width:150px" />
+        @if (!string.IsNullOrEmpty(bestMatch.Sprites.FrontDefault))
+        {
+            <img src="@bestMatch.Sprites.FrontDefault" style="width:150px" />
+        }
 
         <p><strong>Height: </strong>@(bestMatch.Height * 10) cm</p>
         <p><strong>Weight: </strong>@(bestMatch.Weight / 10.0) kg</p>
@@ -68,7 +71,10 @@ else if (bestMatch != null)
             <div class="card p-3" style="width: 200px;">
                 <h6 class="text-capitalize text-center">@matches.match.Name</h6>
 
-                <img src="@matches.match.Sprites.FrontDefault" class="mx-auto d-block" style="width:120px" />
+                @if (!string.IsNullOrEmpty(matches.match.Sprites.FrontDefault))
+                {
+                    <img src="@matches.match.Sprites.FrontDefault" class="mx-auto d-block" style="width:120px" />
+                }
 
                 <p class="text-center mb-1">
                     <strong>Height:</strong> @(matches.match.Height * 10) cm
