@@ -81,15 +81,35 @@ else if (bestMatch != null)
 
     Pokemon? bestMatch;
     List<(Pokemon match, double score)> top3 = new List<(Pokemon match, double score)>();
+
     private async Task FindMatch()
     {
         error = null;
         bestMatch = null;
         top3 = new List<(Pokemon match, double score)>();
 
+        if (heightCm > 999 || weightKg > 999)
+        {
+            error = "Please enter valid data (values cannot exceed 99).";
+            return;
+        }
+
+        if (heightCm <= 0 || weightKg <= 0)
+        {
+            error = "Please enter valid height and weight.";
+            return;
+        }
+
         isLoading = true;
 
         List<Pokemon>? list = await PokemonService.GetManyPokemonAsync(count: 100); // 100 faster for testing 
+
+        if (list.Count == 0)
+        {
+            error = "Could not load Pokémon from API.";
+            isLoading = false;
+            return;
+        }
 
         (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm, weightKg);
 
