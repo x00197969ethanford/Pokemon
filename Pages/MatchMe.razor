@@ -6,38 +6,48 @@
 
 <h3>Find Your Pokémon Twin</h3>
 
-<div class="card p-3 mb-3">
-    <div class="mb-2">
-        <label><strong>Your Height</strong></label>
+<EditForm EditContext="@editContext" OnValidSubmit="FindMatch">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
 
-        <div class="d-flex gap-2">
-            <!-- Input feet -->
-            <div>
-                <InputNumber @bind-Value="heightFeet" class="form-control" style="width: 120px;" />
-                <small>Feet</small>
-            </div>
+    <div class="card p-3 mb-3">
+        <div class="mb-2">
+            <label><strong>Your Height</strong></label>
 
-            <!-- Input inches -->
-            <div>
-                <InputNumber @bind-Value="heightInch" class="form-control" style="width: 120px;" />
-                <small>inches</small>
-            </div>
+            <div class="d-flex gap-2">
+                <!-- Input feet -->
+                <div>
+                    <InputNumber @bind-Value="user.HeightFeet" class="form-control" style="width: 120px;" />
+                    <small>Feet</small>
+                </div>
 
-            <!-- Display cm -->
-            <div class="align-self-center" style="margin-top: -20px;">
-                <span><strong class="bi bi-arrow-right"></strong> <strong>@heightCm.ToString(format: "0.00") cm</strong></span>
+                <!-- Input inches -->
+                <div>
+                    <InputNumber @bind-Value="user.HeightInches" class="form-control" style="width: 120px;" />
+                    <small>inches</small>
+                </div>
+
+                <!-- Display cm -->
+                <div class="align-self-center" style="margin-top: -20px;">
+                    <span><strong class="bi bi-arrow-right"></strong> <strong>@heightCm.ToString(format: "0.00")
+                            cm</strong></span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Input weight -->
-    <div class="mb-2">
-        <label>Your Weight (kg)</label>
-        <InputNumber @bind-Value="weightKg" class="form-control" style="width: 250px"/>
-    </div>
+        <!-- Input weight -->
+        <div class="mb-2">
+            <label>Your Weight (kg)</label>
+            <InputNumber @bind-Value="user.WeightKg" class="form-control" style="width: 250px" />
+        </div>
 
-    <button class="btn btn-primary" @onclick="FindMatch">Find My Pokémon</button>
-</div>
+        <button class="btn btn-primary" @onclick="FindMatch">Find My Pokémon</button>
+    </div>
+</EditForm>
+
+
+
+
 
 <!-- Handle error and empty -->
 @if (isLoading)
@@ -123,7 +133,7 @@ else if (bestMatch != null)
 
         isLoading = true;
 
-        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync(count: 100); // 100 faster for testing 
+        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync(count: 100); // 100 faster for testing
 
         if (list.Count == 0)
         {
@@ -132,7 +142,8 @@ else if (bestMatch != null)
             return;
         }
 
-        (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm, user.WeightKg);
+        (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm,
+        user.WeightKg);
 
         bestMatch = result.best;
         top3 = result.top3;
