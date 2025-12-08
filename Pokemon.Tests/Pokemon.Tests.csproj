@@ -18,4 +18,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\pokemon_project\pokemon_project.csproj" />
+  </ItemGroup>
+
 </Project>
