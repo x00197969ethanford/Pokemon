@@ -47,8 +47,8 @@ else if (bestMatch != null)
 
         <img src="@bestMatch.Sprites.FrontDefault" style="width:150px" />
 
-        <p><strong>Height:</strong>@(bestMatch.Height * 10) cm</p>
-        <p><strong>Weight:</strong>@(bestMatch.Weight / 10.0) kg</p>
+        <p><strong>Height: </strong>@(bestMatch.Height * 10) cm</p>
+        <p><strong>Weight: </strong>@(bestMatch.Weight / 10.0) kg</p>
     </div>
 
     <h5>Top 3 Matches</h5>
@@ -81,7 +81,7 @@ else if (bestMatch != null)
 @code {
     double heightFeet;
     double heightInch;
-    double heightCm;
+    double heightCm => ((heightFeet * 12) + heightInch) * 2.54;
     double weightKg;
 
     bool isLoading = false;
@@ -96,9 +96,9 @@ else if (bestMatch != null)
         bestMatch = null;
         top3 = new List<(Pokemon match, double score)>();
 
-        if (heightCm > 999 || weightKg > 999)
+        if (heightFeet > 999 || heightInch > 999 || weightKg > 999)
         {
-            error = "Please enter valid data (values cannot exceed 99).";
+            error = "Please enter valid data (values cannot exceed 999).";
             return;
         }
 
