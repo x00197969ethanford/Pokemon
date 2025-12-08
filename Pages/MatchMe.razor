@@ -18,19 +18,20 @@
                 <!-- Input feet -->
                 <div>
                     <InputNumber @bind-Value="user.HeightFeet" class="form-control" style="width: 120px;" />
+                    <ValidationMessage For="@(() => user.HeightFeet)" />
                     <small>Feet</small>
                 </div>
 
                 <!-- Input inches -->
                 <div>
                     <InputNumber @bind-Value="user.HeightInches" class="form-control" style="width: 120px;" />
-                    <small>inches</small>
+                    <ValidationMessage For="@(() => user.HeightInches)" />
+                    <small>Inches</small>
                 </div>
 
                 <!-- Display cm -->
                 <div class="align-self-center" style="margin-top: -20px;">
-                    <span><strong class="bi bi-arrow-right"></strong> <strong>@heightCm.ToString(format: "0.00")
-                            cm</strong></span>
+                    <strong>@heightCm cm</strong>
                 </div>
             </div>
         </div>
@@ -38,7 +39,8 @@
         <!-- Input weight -->
         <div class="mb-2">
             <label>Your Weight (kg)</label>
-            <InputNumber @bind-Value="user.WeightKg" class="form-control" style="width: 250px" />
+            <InputNumber @bind-Value="user.WeightKg" class="form-control" />
+            <ValidationMessage For="@(() => user.WeightKg)" />
         </div>
 
         <button class="btn btn-primary" @onclick="FindMatch">Find My Pokémon</button>
