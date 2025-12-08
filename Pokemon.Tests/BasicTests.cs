@@ -5,9 +5,14 @@ namespace Pokemon.Tests
     public class BasicTests
     {
         [Fact]
-        public void SimpleMathTest()
+        public void HeightConversion()
         {
-            Assert.Equal(4, 2 + 2);
+            double feet = 5;
+            double inches = 10;
+
+            double cm = ((feet * 12) + inches) * 2.54;
+
+            Assert.Equal(177.8, cm, precision: 1);
         }
     }
 }
