@@ -73,10 +73,11 @@ namespace pokemon_project.Data
                 })
                 .OrderBy(s => s.score)
                 .ToList();
-            
-            var best = maches.First().match;
 
-            return (best);
+            var best = maches.First().match;
+            var top3 = maches.Take(3).ToList();
+
+            return (best, top3);
         }
     
     }
