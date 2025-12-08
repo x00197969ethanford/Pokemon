@@ -35,7 +35,7 @@ else if (!string.IsNullOrEmpty(error))
 }
 else if (bestMatch != null)
 {
-    <!-- Display -->
+    <!-- Display main match -->
     <div class="card p-3 mb-4">
         <h4>Your Closest Match: <span class="text-capitalize">@bestMatch.Name</span></h4>
 
@@ -47,6 +47,26 @@ else if (bestMatch != null)
 
     <h5>Top 3 Matches</h5>
     <p>The lower the score the closer the match!</p>
+
+    <div>
+        <!-- Display top 3 -->
+        @foreach ((Pokemon match, double score) matches in top3)
+        {
+            <div class="card p-3" style="width: 200px;">
+                <h6>@matches.match.Name</h6>
+
+                <p>
+                    <strong>Height:</strong> @(matches.match.Height * 10) cm
+                </p>
+                <p>
+                    <strong>Weight:</strong> @(matches.match.Weight / 10.0) kg
+                </p>
+                <p>
+                    <strong>Score:</strong> @matches.score
+                </p>
+            </div>
+        }
+    </div>
 }
 
 
