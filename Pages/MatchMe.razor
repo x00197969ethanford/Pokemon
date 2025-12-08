@@ -6,8 +6,9 @@
 
 <div class="card p-3 mb-3">
     <div class="mb-2">
-        <label>Your Height</label>
+        <label><strong>Your Height</strong></label>
 
+        <div class="d-flex gap-2">
             <!-- Input feet -->
             <div>
                 <InputNumber @bind-Value="heightFeet" class="form-control" style="width: 120px;" />
@@ -20,11 +21,17 @@
                 <small>inches</small>
             </div>
 
+            <!-- Display cm -->
+            <div class="align-self-center" style="margin-top: -20px;">
+                <span><strong class="bi bi-arrow-right"></strong> <strong>@heightCm.ToString(format: "0.00") cm</strong></span>
+            </div>
+        </div>
     </div>
+
     <!-- Input weight -->
     <div class="mb-2">
         <label>Your Weight (kg)</label>
-        <InputNumber @bind-Value="weightKg" class="form-control" style="width: 120px"/>
+        <InputNumber @bind-Value="weightKg" class="form-control" style="width: 250px"/>
     </div>
 
     <button class="btn btn-primary" @onclick="FindMatch">Find My Pokémon</button>
