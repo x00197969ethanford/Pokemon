@@ -58,10 +58,12 @@ else if (bestMatch != null)
     string? error = null;
 
     Pokemon? bestMatch;
+    List<(Pokemon match, double score)> top3 = new List<(Pokemon match, double score)>();
     private async Task FindMatch()
     {
         error = null;
         bestMatch = null;
+        top3 = new List<(Pokemon match, double score)>();
 
         isLoading = true;
 
@@ -70,6 +72,8 @@ else if (bestMatch != null)
         (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm, weightKg);
 
         bestMatch = result.best;
+        top3 = result.top3;
+
         isLoading = false;
     }
 }
