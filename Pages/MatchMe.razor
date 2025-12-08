@@ -10,7 +10,7 @@
 
         <!-- Input cm -->
         <div class="d-flex gap-2">           
-            <InputNumber @bind-Value="heightCm" />
+            <InputNumber @bind-Value="heightCm" class="form-control"/>
             <small>cm</small>
         </div>
 
@@ -24,10 +24,23 @@
     <button class="btn btn-primary">Find My Pokémon</button>
 </div>
 
+<!-- Handle error and empty -->
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (!string.IsNullOrEmpty(error))
+{
+    <div class="alert alert-danger">@error</div>
+}
+else if ()
+{}
 
 
 @code {
     double heightCm;
-
     double weightKg;
+
+    bool isLoading = false;
+    string? error = null;
 }
