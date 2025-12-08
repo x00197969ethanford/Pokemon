@@ -57,5 +57,25 @@ namespace pokemon_project.Data
 
             return pokemons;
         }
+
+    public Pokemon FindClosestMatches(List<Pokemon> pokemons, double userHeightCm, double userWeightKg)
+        {
+            var maches = pokemons
+                .Select(match =>
+                {
+                    double pokeHeight = match.Height * 10; // cm
+                    double pokeWeight = match.Weight / 10.0; // kg
+
+                    double score = Math.Abs(userHeightCm - pokeHeight)
+                                 + Math.Abs(userWeightKg - pokeWeight);
+
+                    return (match, score);
+                })
+                .OrderBy(s => s.score)
+                .ToList();
+
+            return maches.First().match;
+        }
+    
     }
 }
