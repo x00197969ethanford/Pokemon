@@ -132,7 +132,7 @@ else if (bestMatch != null)
             return;
         }
 
-        (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm, weightKg);
+        (Pokemon best, List<(Pokemon match, double score)> top3) result = PokemonService.FindClosestMatches(list, heightCm, user.WeightKg);
 
         bestMatch = result.best;
         top3 = result.top3;
