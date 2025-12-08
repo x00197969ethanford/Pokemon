@@ -21,11 +21,6 @@ obj/
 **/wwwroot/_framework/*.gz
 **/wwwroot/_framework/*.br
 
-# Publish output
-**/wwwroot/*
-!**/wwwroot/index.html
-!**/wwwroot/appsettings*.json
-
 # Logs
 *.log
 
