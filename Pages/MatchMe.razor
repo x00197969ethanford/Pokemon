@@ -8,11 +8,17 @@
     <div class="mb-2">
         <label>Your Height</label>
 
-        <!-- Input cm -->
-        <div class="d-flex gap-2">           
-            <InputNumber @bind-Value="heightCm" class="form-control" style="width: 120px"/>
-            <small>cm</small>
-        </div>
+            <!-- Input feet -->
+            <div>
+                <InputNumber @bind-Value="heightFeet" class="form-control" style="width: 120px;" />
+                <small>Feet</small>
+            </div>
+
+            <!-- Input inches -->
+            <div>
+                <InputNumber @bind-Value="heightInch" class="form-control" style="width: 120px;" />
+                <small>inches</small>
+            </div>
 
     </div>
     <!-- Input weight -->
@@ -73,6 +79,8 @@ else if (bestMatch != null)
 
 
 @code {
+    double heightFeet;
+    double heightInch;
     double heightCm;
     double weightKg;
 
