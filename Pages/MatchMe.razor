@@ -38,9 +38,15 @@ else if (bestMatch != null)
     <!-- Display -->
     <div class="card p-3 mb-4">
         <h4>Your Closest Match: <span class="text-capitalize">@bestMatch.Name</span></h4>
+
+        <img src="@bestMatch.Sprites.FrontDefault" style="width:150px" />
+
         <p><strong>Height:</strong>@(bestMatch.Height * 10) cm</p>
         <p><strong>Weight:</strong>@(bestMatch.Weight / 10.0) kg</p>
     </div>
+
+    <h5>Top 3 Matches</h5>
+    <p>The lower the score the closer the match!</p>
 }
 
 
