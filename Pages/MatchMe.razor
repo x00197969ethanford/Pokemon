@@ -118,15 +118,9 @@ else if (bestMatch != null)
         bestMatch = null;
         top3 = new List<(Pokemon match, double score)>();
 
-        if (heightFeet > 999 || heightInch > 999 || weightKg > 999)
+        if (editContext is not null && !editContext.Validate())
         {
-            error = "Please enter valid data (values cannot exceed 999).";
-            return;
-        }
-
-        if (heightCm <= 0 || weightKg <= 0)
-        {
-            error = "Please enter valid height and weight.";
+            error = "Please fix the validation errors above.";
             return;
         }
 
