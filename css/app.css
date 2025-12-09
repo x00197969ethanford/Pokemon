@@ -123,3 +123,21 @@ code {
     font-size: 1rem;
     margin-bottom: 27px;
 }
+
+.height-box {
+    width: 200px;
+}
+
+.height-container {
+    align-items: center;
+}
+
+.height-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-display {
+    margin-top: -10px;
+    white-space: nowrap;
+}
