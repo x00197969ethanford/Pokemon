@@ -46,8 +46,7 @@ namespace pokemon_project.Data
                 try
                 {
                     var match = await GetPokemonAsync(i.ToString());
-                    if (match != null)
-                        pokemons.Add(match);
+                    if (match != null) pokemons.Add(match);
                 }
                 catch
                 {
@@ -60,19 +59,16 @@ namespace pokemon_project.Data
 
     public (Pokemon best, List<(Pokemon match, double score)> top3) FindClosestMatches(List<Pokemon> pokemons, double userHeightCm, double userWeightKg)
         {
-            var maches = pokemons
-                .Select(match =>
+            var maches = pokemons.Select(match =>
                 {
                     double pokeHeight = match.Height * 10; // cm
                     double pokeWeight = match.Weight / 10.0; // kg
 
-                    double score = Math.Abs(userHeightCm - pokeHeight)
-                                 + Math.Abs(userWeightKg - pokeWeight);
+                    double score = Math.Abs(userHeightCm - pokeHeight) + Math.Abs(userWeightKg - pokeWeight);
 
                     return (match, score);
-                })
-                .OrderBy(s => s.score)
-                .ToList();
+
+                }).OrderBy(s => s.score).ToList();
 
             var best = maches.First().match;
             var top3 = maches.Take(3).ToList();

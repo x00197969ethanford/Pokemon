@@ -31,7 +31,7 @@
 
                 <!-- Display cm -->
                 <div class="align-self-center" style="margin-top: -20px;">
-                    <strong> = @heightCm cm</strong>
+                    <strong> =  @heightCm.ToString(format: "0.00") cm</strong>
                 </div>
             </div>
         </div>
@@ -61,8 +61,9 @@ else if (!string.IsNullOrEmpty(error))
 else if (bestMatch != null)
 {
     <!-- Display main match -->
-    <div class="card p-3 mb-4">
-        <h4>Your Closest Match: 
+    <h4>Your Closest Match:</h4>
+    <div class="card p-3 mb-4 text-center" style="width: 400px">
+        <h4 class="center">
             <NavLink class="text-capitalize" href="@($"/pokemon/{bestMatch.Name}")">
                 @bestMatch.Name
             </NavLink>  
@@ -70,11 +71,11 @@ else if (bestMatch != null)
 
         @if (!string.IsNullOrEmpty(bestMatch.Sprites.FrontDefault))
         {
-            <img src="@bestMatch.Sprites.FrontDefault" style="width:150px" />
+            <img class="mx-auto" src="@bestMatch.Sprites.FrontDefault" style="width:200px" />
         }
 
-        <p><strong>Height: </strong>@(bestMatch.Height * 10) cm</p>
-        <p><strong>Weight: </strong>@(bestMatch.Weight / 10.0) kg</p>
+        <p><h5><strong>Height: </strong>@(bestMatch.Height * 10) cm</h5></p>
+        <p><h5><strong>Weight: </strong>@(bestMatch.Weight / 10.0) kg</h5></p>
     </div>
 
     <h5>Top 3 Matches</h5>
