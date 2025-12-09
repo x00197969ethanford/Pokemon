@@ -38,8 +38,8 @@
 
         <!-- Input weight -->
         <div class="mb-2">
-            <label>Your Weight (kg)</label>
-            <InputNumber @bind-Value="user.WeightKg" class="form-control" style="width: 410px;"/>
+            <label><strong>Your Weight (kg)<strong/></label>
+            <InputNumber @bind-Value="user.WeightKg" class="form-control weight-box"/>
             <ValidationMessage For="@(() => user.WeightKg)" />
         </div>
 
