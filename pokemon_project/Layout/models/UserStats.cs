@@ -9,7 +9,7 @@ namespace pokemon_project.Models
         public int HeightFeet { get; set; }
 
         [Required(ErrorMessage = "Height (inches) is required.")]
-        [Range(0, 11, ErrorMessage = "Inches must be between 0 and 11.")]
+        [Range(1, 11, ErrorMessage = "Inches must be between 1 and 11.")]
         public int HeightInches { get; set; }
 
         [Required(ErrorMessage = "Weight is required.")]
