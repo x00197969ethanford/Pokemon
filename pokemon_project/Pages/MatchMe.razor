@@ -1,7 +1,10 @@
 @page "/matchme"
+@using System.Text.RegularExpressions
 @using pokemon_project.Data
 @inject PokemonService PokemonService
 @using pokemon_project.Models
+@inject NavigationManager Nav
+
 
 
 <h3>Find Your Pokémon Twin</h3>
@@ -64,7 +67,7 @@ else if (bestMatch != null)
     <h4>Your Closest Match:</h4>
     <div class="card p-3 mb-4 text-center" style="width: 400px">
         <h4 class="center">
-            <NavLink class="text-capitalize" href="@($"/Pokemon/pokemon/{bestMatch.Name}")">
+            <NavLink class="text-capitalize" href="@($"{Nav.BaseUri}pokemon/{bestMatch.Name}")">
                 @bestMatch.Name
             </NavLink>  
         </h4>
@@ -87,7 +90,7 @@ else if (bestMatch != null)
         {
             <div class="card p-3" style="width: 200px;">
                 <h6 class="text-capitalize text-center">
-                    <NavLink href="@($"/Pokemon/pokemon/{matches.match.Name}")">
+                    <NavLink href="@($"{Nav.BaseUri}pokemon/{matches.match.Name}")">
                         @matches.match.Name
                     </NavLink>
                 </h6>
