@@ -35,5 +35,11 @@ namespace PokemonProject.Tests
 
             Assert.Contains("Pokemon Project", title);
         }
+
+        [Fact]
+        public async Task SearchPage_ShouldReturnPokemon()
+        {
+            var page = await browser.NewPageAsync();
+        }
     }
 }
