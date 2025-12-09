@@ -48,7 +48,15 @@ namespace PokemonProject.Tests
         [Fact]
         public void SearchPokemon()
         {
-            
+            List<Pokemon> pokemons = new()
+            {
+                new Pokemon { Name = "pikachu", Height = 4, Weight = 60 },
+                new Pokemon { Name = "Pidgey", Height = 3, Weight = 18 },
+                new Pokemon { Name = "Bulbasaur", Height = 7, Weight = 69 },
+            };
+
+            string searchName = "pikachu"; // search
+
         }
     }
 }
