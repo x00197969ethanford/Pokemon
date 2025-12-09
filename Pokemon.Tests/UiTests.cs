@@ -24,5 +24,16 @@ namespace PokemonProject.Tests
             play.Dispose();
         }
 
+        [Fact]
+        public async Task HomePage()
+        {
+            var page = await browser.NewPageAsync();
+
+            await page.GotoAsync("http://localhost:5136");
+
+            string title = await page.TitleAsync();
+
+            Assert.Contains("Pokemon Project", title);
+        }
     }
 }
