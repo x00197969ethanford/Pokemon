@@ -24,6 +24,9 @@ jobs:
     - name: Patch base href for GitHub Pages
       run: sed -i 's|<base href="/" />|<base href="/Pokemon/" />|' pokemon_project/wwwroot/index.html
 
+    - name: Run unit tests
+      run: dotnet test
+
     - name: Publish Blazor project
       run: dotnet publish pokemon_project/pokemon_project.csproj -c Release -o release
 
