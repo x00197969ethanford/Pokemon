@@ -17,21 +17,21 @@
             <div class="d-flex gap-2">
                 <!-- Input feet -->
                 <div>
-                    <InputNumber @bind-Value="user.HeightFeet" class="form-control" style="width: 120px;" />
+                    <InputNumber @bind-Value="user.HeightFeet" class="form-control" style="width: 200px;" />
                     <ValidationMessage For="@(() => user.HeightFeet)" />
                     <small>Feet</small>
                 </div>
 
                 <!-- Input inches -->
                 <div>
-                    <InputNumber @bind-Value="user.HeightInches" class="form-control" style="width: 120px;" />
+                    <InputNumber @bind-Value="user.HeightInches" class="form-control" style="width: 200px;" />
                     <ValidationMessage For="@(() => user.HeightInches)" />
                     <small>Inches</small>
                 </div>
 
                 <!-- Display cm -->
                 <div class="align-self-center" style="margin-top: -20px;">
-                    <strong>@heightCm cm</strong>
+                    <strong> = @heightCm cm</strong>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
         <!-- Input weight -->
         <div class="mb-2">
             <label>Your Weight (kg)</label>
-            <InputNumber @bind-Value="user.WeightKg" class="form-control" />
+            <InputNumber @bind-Value="user.WeightKg" class="form-control" style="width: 410px;"/>
             <ValidationMessage For="@(() => user.WeightKg)" />
         </div>
 
