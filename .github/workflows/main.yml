@@ -22,8 +22,7 @@ jobs:
         dotnet-version: 8.0.x
     
     - name: Patch base href for GitHub Pages
-      run: sed -i 's|<base href="/" />|<base href="/Pokemon/" />|' wwwroot/index.html
-
+      run: sed -i 's|<base href="/" />|<base href="/Pokemon/" />|' pokemon_project/wwwroot/index.html
 
     - name: Publish Blazor project
       run: dotnet publish pokemon_project/pokemon_project.csproj -c Release -o release
