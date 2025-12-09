@@ -14,7 +14,7 @@ namespace PokemonProject.Tests
             play = await Playwright.CreateAsync();
             browser = await play.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = true 
+                Headless = true
             });
         }
 
@@ -37,9 +37,18 @@ namespace PokemonProject.Tests
         }
 
         [Fact]
-        public async Task SearchPage_ShouldReturnPokemon()
+        public async Task SearchPage()
         {
             var page = await browser.NewPageAsync();
+
+            await page.GotoAsync("http://localhost:5136/pokemon");
+
+            await page.FillAsync("input[type=text]", "pikachu");
+
+            await page.ClickAsync("button");
+
+            string content = await page.ContentAsync().ConfigureAwait(false);
+            Assert.Contains("pikachu", content.ToLower());
         }
     }
 }
