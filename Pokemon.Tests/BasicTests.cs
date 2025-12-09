@@ -42,4 +42,13 @@ namespace PokemonProject.Tests
             Assert.True(top3[1].score <= top3[2].score);
         }
     }
+
+    public class PokemonSearchTest
+    {
+        [Fact]
+        public void SearchPokemon()
+        {
+            
+        }
+    }
 }
