@@ -6,8 +6,8 @@ namespace PokemonProject.Tests
 {
     public class UiTests
     {
-        private IPlaywright play;
-        private IBrowser browser;
+        private IPlaywright play = null!;
+        private IBrowser browser = null!;
 
         public async Task InitializeAsync()
         {
