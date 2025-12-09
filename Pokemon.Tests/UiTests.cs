@@ -4,18 +4,23 @@ using Xunit;
 
 namespace PokemonProject.Tests
 {
-    public class UiTests
+    public class UiTests : IAsyncLifetime
     {
-        private IPlaywright play = null!;
-        private IBrowser browser = null!;
+        private IPlaywright _playwright = null!;
+        private IBrowser _browser = null!;
 
         public async Task InitializeAsync()
         {
-            play = await Playwright.CreateAsync();
-            browser = await play.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            _playwright = await Playwright.CreateAsync();
+            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = true 
+                Headless = true
             });
         }
+        public Task DisposeAsync()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
