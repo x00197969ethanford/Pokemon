@@ -141,3 +141,7 @@ code {
     margin-top: -10px;
     white-space: nowrap;
 }
+
+.weight-box {
+    width: 410px;
+}
