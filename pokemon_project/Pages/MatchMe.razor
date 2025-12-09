@@ -142,7 +142,7 @@ else if (bestMatch != null)
 
         isLoading = true;
 
-        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync(count: 100); // 100 faster for testing
+        List<Pokemon>? list = await PokemonService.GetManyPokemonAsync(count: 898); // was 100 for faster for testing
 
         if (list.Count == 0)
         {

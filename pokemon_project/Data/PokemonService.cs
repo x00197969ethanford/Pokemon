@@ -37,7 +37,7 @@ namespace pokemon_project.Data
             return new Random().Next(1, 898); // There are 898 pokemon
         }
 
-        public async Task<List<Pokemon>> GetManyPokemonAsync(int count = 100) // 100 for faster testing can be changed
+        public async Task<List<Pokemon>> GetManyPokemonAsync(int count = 898) // was 100 for faster testing can be changed
         {
             var pokemons = new List<Pokemon>();
 
