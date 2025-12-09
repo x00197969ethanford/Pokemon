@@ -14,23 +14,23 @@
         <div class="mb-2">
             <label><strong>Your Height</strong></label>
 
-            <div class="d-flex gap-2">
+            <div class="height-container d-flex gap-2 flex-wrap">
                 <!-- Input feet -->
-                <div>
+                <div class="height-input">
                     <InputNumber @bind-Value="user.HeightFeet" class="form-control" style="width: 200px;" />
                     <ValidationMessage For="@(() => user.HeightFeet)" />
                     <small>Feet</small>
                 </div>
 
                 <!-- Input inches -->
-                <div>
+                <div class="height-input">
                     <InputNumber @bind-Value="user.HeightInches" class="form-control" style="width: 200px;" />
                     <ValidationMessage For="@(() => user.HeightInches)" />
                     <small>Inches</small>
                 </div>
 
                 <!-- Display cm -->
-                <div class="align-self-center" style="margin-top: -20px;">
+                <div class="align-self-center cm-display" style="margin-top: -20px;">
                     <strong> =  @heightCm.ToString(format: "0.00") cm</strong>
                 </div>
             </div>
