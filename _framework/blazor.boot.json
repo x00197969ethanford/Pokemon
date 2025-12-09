@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "pokemon_project",
   "resources": {
-    "hash": "sha256-GL/PdLOxDW3dX7rSDkLrK5M5YMEMLTeqqiKCxU2WBSQ=",
+    "hash": "sha256-EkMG1qgTUvHeE5Yn24bcXtV1ZvQV4Ovp+2EOoy74ynU=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.xhvi45twas.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.8ql8ql1hwu.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -46,7 +46,7 @@
       "System.Text.RegularExpressions.k8ibga7wut.wasm": "System.Text.RegularExpressions.wasm",
       "System.t4d4s3f398.wasm": "System.wasm",
       "System.Private.CoreLib.f0i47lexoh.wasm": "System.Private.CoreLib.wasm",
-      "pokemon_project.whgw97r0vy.wasm": "pokemon_project.wasm",
+      "pokemon_project.oo5ndllodg.wasm": "pokemon_project.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.noby4tlk4d.js": "dotnet.native.js",
       "dotnet.native.qe75a9vfqn.wasm": "dotnet.native.wasm",
@@ -115,7 +115,7 @@
       "System.Text.Json.1t4n5hye0r.wasm": "sha256-697muDAW58yUXAYr4kbn5vKs7pv2JcWOdVPSMrCJovc=",
       "System.Text.RegularExpressions.k8ibga7wut.wasm": "sha256-7OYvLuFLvwbax++2u+uoDmoaX8o/Q8wcYJC92eP1YjA=",
       "System.t4d4s3f398.wasm": "sha256-fVP2BxRRKpBA0PmBbKxmO45bXDrAXVn1GthlDclLbeU=",
-      "pokemon_project.whgw97r0vy.wasm": "sha256-fA9qBJ9LSi3q3ZsSYZK3rmkvljz0DwVc1Psj0LpEleY="
+      "pokemon_project.oo5ndllodg.wasm": "sha256-eJJzhuAgyKysJ+RmNZMYEqLgAdyeYtyRjW6UdeHqAF8="
     }
   },
   "cacheBootResources": true,
