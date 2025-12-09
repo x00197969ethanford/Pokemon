@@ -63,7 +63,7 @@ else if (bestMatch != null)
     <!-- Display main match -->
     <div class="card p-3 mb-4">
         <h4>Your Closest Match: 
-            <NavLink  class="text-capitalize" href="@($"/pokemon/{bestMatch.Name}")">
+            <NavLink class="text-capitalize" href="@($"/pokemon/{bestMatch.Name}")">
                 @bestMatch.Name
             </NavLink>  
         </h4>
@@ -85,7 +85,11 @@ else if (bestMatch != null)
         @foreach ((Pokemon match, double score) matches in top3)
         {
             <div class="card p-3" style="width: 200px;">
-                <h6 class="text-capitalize text-center">@matches.match.Name</h6>
+                <h6 class="text-capitalize text-center">
+                    <NavLink href="@($"/pokemon/{matches.match.Name}")">
+                        @matches.match.Name
+                    </NavLink>
+                </h6>
 
                 @if (!string.IsNullOrEmpty(matches.match.Sprites.FrontDefault))
                 {
