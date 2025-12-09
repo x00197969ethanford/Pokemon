@@ -57,6 +57,10 @@ namespace PokemonProject.Tests
 
             string searchName = "pikachu"; // search
 
+            var result = pokemons.FirstOrDefault(p => p.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase));
+
+            Assert.NotNull(result);
+            Assert.Equal("pikachu", result!.Name);
         }
     }
 }
