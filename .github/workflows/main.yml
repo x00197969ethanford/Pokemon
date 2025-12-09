@@ -20,9 +20,14 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
-    
+
+    # issue with deployed urls
     - name: Patch base href for GitHub Pages
-      run: sed -i 's|<base href="/" />|<base href="/Pokemon/" />|' pokemon_project/wwwroot/index.html
+      run: sed -i 's|<base href="/" />|<base href="/Pokemon/" />|' pokemon_project/wwwroot/index.html 
+
+    # issue with deployed urls
+    - name: Patch base href for GitHub Pages
+      run: sed -i 's|<NavLink href="@($"/pokemon/{matches.match.Name}")">|<NavLink href="@($"/Pokemon/pokemon/{matches.match.Name}")">|' pokemon_project/Pages/MatchMe.razor
 
     - name: Run unit tests
       run: dotnet test
