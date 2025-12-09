@@ -24,13 +24,13 @@
 
                 <!-- Input inches -->
                 <div class="height-input">
-                    <InputNumber @bind-Value="user.HeightInches" class="form-control" style="width: 200px;" />
+                    <InputNumber @bind-Value="user.HeightInches" class="form-control height-box" />
                     <ValidationMessage For="@(() => user.HeightInches)" />
                     <small>Inches</small>
                 </div>
 
                 <!-- Display cm -->
-                <div class="align-self-center cm-display" style="margin-top: -20px;">
+                <div class="align-self-center cm-display">
                     <strong> =  @heightCm.ToString(format: "0.00") cm</strong>
                 </div>
             </div>

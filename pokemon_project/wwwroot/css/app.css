@@ -136,3 +136,8 @@ code {
     display: flex;
     flex-direction: column;
 }
+
+.cm-display {
+    margin-top: -10px;
+    white-space: nowrap;
+}
