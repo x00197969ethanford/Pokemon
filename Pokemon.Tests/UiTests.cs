@@ -6,20 +6,22 @@ namespace PokemonProject.Tests
 {
     public class UiTests : IAsyncLifetime
     {
-        private IPlaywright _playwright = null!;
-        private IBrowser _browser = null!;
+        private IPlaywright play = null!;
+        private IBrowser browser = null!;
 
         public async Task InitializeAsync()
         {
-            _playwright = await Playwright.CreateAsync();
-            _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            play = await Playwright.CreateAsync();
+            browser = await play.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = true
+                Headless = true 
             });
         }
-        public Task DisposeAsync()
+
+        public async Task DisposeAsync()
         {
-            throw new NotImplementedException();
+            await browser.CloseAsync();
+            play.Dispose();
         }
 
     }
