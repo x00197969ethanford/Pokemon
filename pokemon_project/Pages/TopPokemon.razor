@@ -58,7 +58,17 @@
 else
 {
     <div class="d-flex flex-wrap gap-3">
+        @foreach (Pokemon p in filtered)
+        {
+            <div class="card p-3" style="width: 220px;">
+                <h5 class="text-capitalize text-center">@p.Name</h5>
 
+                @if (!string.IsNullOrEmpty(p.Sprites.FrontDefault))
+                {
+                    <img class="mx-auto d-block" style="width:140px" src="@p.Sprites.FrontDefault" />
+                }
+            </div>
+        }
     </div>
 }
 
