@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dWQcv36HopY=",
+  "dgSpecHash": "Et6GB0uTy5U=",
   "success": true,
   "projectFilePath": "C:\\Users\\ethan\\OneDrive\\Documents\\OneDrive\\2_semester1\\App Development\\CA3\\Pokemon.Tests\\Pokemon.Tests.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,8 @@
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.10\\microsoft.extensions.fileproviders.abstractions.9.0.10.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\9.0.10\\microsoft.extensions.fileproviders.physical.9.0.10.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\9.0.10\\microsoft.extensions.filesystemglobbing.9.0.10.nupkg.sha512",
+    "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.localization\\9.0.1\\microsoft.extensions.localization.9.0.1.nupkg.sha512",
+    "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\9.0.1\\microsoft.extensions.localization.abstractions.9.0.1.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.logging\\9.0.10\\microsoft.extensions.logging.9.0.10.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.10\\microsoft.extensions.logging.abstractions.9.0.10.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.extensions.options\\9.0.10\\microsoft.extensions.options.9.0.10.nupkg.sha512",
@@ -34,6 +36,7 @@
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.playwright\\1.57.0\\microsoft.playwright.1.57.0.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.testplatform.objectmodel\\18.0.1\\microsoft.testplatform.objectmodel.18.0.1.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\microsoft.testplatform.testhost\\18.0.1\\microsoft.testplatform.testhost.18.0.1.nupkg.sha512",
+    "C:\\Users\\ethan\\.nuget\\packages\\mudblazor\\8.15.0\\mudblazor.8.15.0.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\ethan\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
