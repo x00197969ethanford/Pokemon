@@ -10,18 +10,22 @@
     <div class="row g-2">
         <div class="col-6 col-md-3">
             <label>Min HP</label>
+            <InputNumber @bind-Value="minHp" class="form-control" />
         </div>
 
         <div class="col-6 col-md-3">
             <label>Min Attack</label>
+            <InputNumber @bind-Value="minAttack" class="form-control" />
         </div>
 
         <div class="col-6 col-md-3">
             <label>Min Defense</label>
+            <InputNumber @bind-Value="minDefense" class="form-control" />
         </div>
 
         <div class="col-6 col-md-3">
             <label>Min Speed</label>
+            <InputNumber @bind-Value="minSpeed" class="form-control" />
         </div>
     </div>
 
@@ -31,5 +35,8 @@
 
 
 @code {
-
+    int minHp = 0;
+    int minAttack = 0;
+    int minDefense = 0;
+    int minSpeed = 0;
 }
