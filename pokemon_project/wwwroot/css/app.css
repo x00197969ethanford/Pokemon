@@ -153,6 +153,7 @@ code {
 .weight-box {
     width: 410px;
 }
+
 /* home page */
 
 .home-card {
@@ -168,6 +169,5 @@ code {
 }
 
 .media-cover {
-    object-fit: contain !important;
-    padding: 12px !important;
+    background-size: contain !important;
 }

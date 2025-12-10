@@ -3,8 +3,8 @@
 <MudContainer MaxWidth="MaxWidth.Large" Class="mt-8">
 
     <MudStack AlignItems="AlignItems.Center" Class="mb-6">
-        <MudText Typo="Typo.h3" Class="fw-bold">Pokémon Project</MudText>
-        <MudText Typo="Typo.subtitle1">
+        <MudText Style="font-size: 2rem;" Class="fw-bold">Pokémon Project</MudText>
+        <MudText>
             Explore stats, find matches, and discover new Pokémon.
         </MudText>
     </MudStack>
@@ -17,6 +17,22 @@
               href: "/pokemon",
               Color.Primary,
               buttonText: "Start Searching")
+
+        @Card(title: "Find Your Pokémon Twin",
+                    description: "Enter your height and weight to discover your closest Pokémon match.",
+                    snorlaxImg,
+                    href: "/matchme",
+                    Color.Success,
+                    buttonText: "Find Match")
+
+        @Card(title: "Top Pokémon",
+              description: "Filter Pokémon by their stats to find the top in their category.",
+              giratinaImg,
+              href: "/top12",
+              Color.Secondary,
+              buttonText: "Discover ")
+
+        
 
     </MudGrid>
 
@@ -36,7 +52,7 @@
             <MudCard Class="home-card">
                 <MudCardMedia Image="@image" Height="160" Class="media-cover" />
                 <MudCardContent>
-                    <MudText Typo="Typo.h6" Class="mb-1">@title</MudText>
+                    <MudText Style="font-size: 1.1rem;" Class="mb-1 fw-bold">@title</MudText>
                     <MudText Typo="Typo.body2">@description</MudText>
                 </MudCardContent>
                 <MudCardActions Class="pb-3 ps-3">
@@ -49,7 +65,7 @@
     };
 
     string pikachuImg  = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
-    string bulbasaurImg = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png";
+    string giratinaImg = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png";
     string snorlaxImg   = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png";
 }
 
