@@ -45,5 +45,5 @@ jobs:
 
     - name: Run Playwright tests
       env:
-        TEST_URL: "https://ethandunne02.github.io/Pokemon/"
+        TEST_URL: "https://x00197969ethanford.github.io/Pokemon/"
       run: dotnet run --project PlaywrightRunner
