@@ -9,11 +9,33 @@
         </MudText>
     </MudStack>
 
+    <MudGrid Spacing="4" Justify="Justify.Center">
+
+
+
+    </MudGrid>
 
 </MudContainer>
 
 @code {
 
+    RenderFragment Card(
+        string title,
+        string description,
+        string image,
+        string href,
+        Color color,
+        string buttonText) => __builder =>
+    {
+
+    };
+
+    string pikachuImg  = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
+    string bulbasaurImg = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png";
+    string snorlaxImg   = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png";
 }
+
+
+
 
 
