@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MudBlazor.Services;
 using pokemon_project;
 using pokemon_project.Data;
 
@@ -11,5 +12,6 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https:/
 
 builder.Services.AddScoped<PokemonService>();
 
+builder.Services.AddMudServices();
 
 await builder.Build().RunAsync();
