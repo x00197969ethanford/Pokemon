@@ -1,6 +1,7 @@
 @page "/top12"
 @using pokemon_project.Data
 @inject PokemonService PokemonService
+@inject NavigationManager Nav
 
 <h3>Top 10 Pokémon</h3>
 
@@ -73,7 +74,7 @@ else
                 <p class="text-center mb-0"><strong>DEF:</strong> @Stat(p, statName: "defense")</p>
                 <p class="text-center mb-2"><strong>SPD:</strong> @Stat(p, statName: "speed")</p>
 
-                <NavLink class="btn btn-primary btn-sm mx-auto" href="@($"/pokemon/{p.Name}")">
+                <NavLink class="btn btn-primary btn-sm mx-auto" href="@($"{Nav.BaseUri}pokemon/{p.Name}")">
                     View
                 </NavLink>
 
