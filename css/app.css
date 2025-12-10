@@ -133,7 +133,8 @@ code {
 }
 
 .height-box {
-    width: 200px;
+    width: 100%;
+    max-width: 160px;
 }
 
 .height-container {
@@ -151,7 +152,8 @@ code {
 }
 
 .weight-box {
-    width: 410px;
+    width: 100%;
+    max-width: 300px;
 }
 
 /* home page */
