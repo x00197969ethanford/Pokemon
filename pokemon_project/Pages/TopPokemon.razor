@@ -57,7 +57,7 @@
     int minSpeed = 0;
 
     string sortBy = "hp";
-    bool sortAsc; 
+    bool sortAsc = false; // best first
 
     int Stat(Pokemon p, string statName)
     {
@@ -69,6 +69,12 @@
             }
         }
         return 0;
+    }
+
+    void ToggleSort() 
+    { 
+        sortAsc = !sortAsc; 
+        ApplyFilters(); 
     }
 
     void ApplyFilters()
