@@ -57,7 +57,7 @@
     int minSpeed = 0;
 
     string sortBy = "hp";
-    bool sortAsc;
+    bool sortAsc; 
 
     int Stat(Pokemon p, string statName)
     {
@@ -79,6 +79,14 @@
             Stat(p, statName: "defense") >= minDefense &&
             Stat(p, statName: "speed") >= minSpeed
         );
+    }
+
+    IEnumerable<Pokemon> SortResults(IEnumerable<Pokemon> list)
+    {
+        if (sortBy == "hp")
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "hp")) : list.OrderByDescending(p => Stat(p, statName: "hp"));
+
+        return sortAsc ? list.OrderBy(p => p.Name) : list.OrderByDescending(p => p.Name);
     }
 
 }
