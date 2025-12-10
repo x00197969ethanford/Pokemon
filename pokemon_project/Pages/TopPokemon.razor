@@ -46,8 +46,8 @@
 
 
 @code {
-    List<Pokemon> all = new();
-    List<Pokemon> filtered = new();
+    List<Pokemon> all = new List<Pokemon>();
+    List<Pokemon> filtered = new List<Pokemon>();
 
     bool isLoading = true;
 
@@ -57,7 +57,7 @@
     int minSpeed = 0;
 
     string sortBy = "hp";
-    bool sortAsc; 
+    bool sortAsc;
 
     int Stat(Pokemon p, string statName)
     {
@@ -69,6 +69,16 @@
             }
         }
         return 0;
+    }
+
+    IEnumerable<Pokemon> FilterByStats(IEnumerable<Pokemon> list)
+    {
+        return list.Where(p =>
+            Stat(p, statName: "hp") >= minHp &&
+            Stat(p, statName: "attack") >= minAttack &&
+            Stat(p, statName: "defense") >= minDefense &&
+            Stat(p, statName: "speed") >= minSpeed
+        );
     }
 
 }
