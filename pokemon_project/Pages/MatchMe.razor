@@ -34,7 +34,7 @@
 
                 <!-- Display cm -->
                 <div class="align-self-center cm-display">
-                    <strong> =  @heightCm.ToString(format: "0.00") cm</strong>
+                    <strong> = @heightCm.ToString(format: "0.00") cm</strong>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
         <!-- Input weight -->
         <div class="mb-2">
             <label><strong>Your Weight (kg)</strong></label>
-            <InputNumber @bind-Value="user.WeightKg" class="form-control weight-box"/>
+            <InputNumber @bind-Value="user.WeightKg" class="form-control weight-box" />
             <ValidationMessage For="@(() => user.WeightKg)" />
         </div>
 
@@ -65,11 +65,13 @@ else if (bestMatch != null)
 {
     <!-- Display main match -->
     <h4>Your Closest Match:</h4>
-    <div class="card p-3 mb-4 text-center" style="width: 400px">
+    <div class="card p-3 mb-4 text-center">
         <h4 class="center">
-            <NavLink class="text-capitalize" href="@($"{Nav.BaseUri}pokemon/{bestMatch.Name}")">
-                @bestMatch.Name
-            </NavLink>  
+            <h4 class="center">
+                <NavLink class="text-capitalize link-blue" href="@($"{Nav.BaseUri}pokemon/{bestMatch.Name}")">
+                    @bestMatch.Name
+                </NavLink>
+            </h4>
         </h4>
 
         @if (!string.IsNullOrEmpty(bestMatch.Sprites.FrontDefault))
@@ -77,8 +79,12 @@ else if (bestMatch != null)
             <img class="mx-auto" src="@bestMatch.Sprites.FrontDefault" style="width:200px" />
         }
 
-        <p><h5><strong>Height: </strong>@(bestMatch.Height * 10) cm</h5></p>
-        <p><h5><strong>Weight: </strong>@(bestMatch.Weight / 10.0) kg</h5></p>
+        <p>
+        <h5><strong>Height: </strong>@(bestMatch.Height * 10) cm</h5>
+        </p>
+        <p>
+        <h5><strong>Weight: </strong>@(bestMatch.Weight / 10.0) kg</h5>
+        </p>
     </div>
 
     <h5>Top 3 Matches</h5>
@@ -90,7 +96,7 @@ else if (bestMatch != null)
         {
             <div class="card p-3" style="width: 200px;">
                 <h6 class="text-capitalize text-center">
-                    <NavLink href="@($"{Nav.BaseUri}pokemon/{matches.match.Name}")">
+                    <NavLink class="link-blue" href="@($"{Nav.BaseUri}pokemon/{matches.match.Name}")">
                         @matches.match.Name
                     </NavLink>
                 </h6>
