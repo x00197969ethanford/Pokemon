@@ -1,4 +1,6 @@
 @page "/"
+@inject NavigationManager Nav
+
 
 <MudContainer MaxWidth="MaxWidth.Large" Class="mt-8">
 
@@ -56,7 +58,7 @@
                     <MudText Typo="Typo.body2">@description</MudText>
                 </MudCardContent>
                 <MudCardActions Class="pb-3 ps-3">
-                    <MudButton Color="@color" Variant="Variant.Filled" Href="@href">
+                    <MudButton Color="@color" Variant="Variant.Filled" Href="@($"{Nav.BaseUri}{href.TrimStart('/')}" )">
                         @buttonText
                     </MudButton>
                 </MudCardActions>
