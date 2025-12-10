@@ -86,6 +86,21 @@
         if (sortBy == "hp")
             return sortAsc ? list.OrderBy(p => Stat(p, statName: "hp")) : list.OrderByDescending(p => Stat(p, statName: "hp"));
 
+        if (sortBy == "attack")
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "attack")) : list.OrderByDescending(p => Stat(p, statName: "attack"));
+
+        if (sortBy == "defense")
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "defense")) : list.OrderByDescending(p => Stat(p, statName: "defense"));
+
+        if (sortBy == "speed")
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "speed")) : list.OrderByDescending(p => Stat(p, statName: "speed"));
+
+        if (sortBy == "height")
+            return sortAsc ? list.OrderBy(p => p.Height) : list.OrderByDescending(p => p.Height);
+
+        if (sortBy == "weight")
+            return sortAsc ? list.OrderBy(p => p.Weight) : list.OrderByDescending(p => p.Weight);
+
         return sortAsc ? list.OrderBy(p => p.Name) : list.OrderByDescending(p => p.Name);
     }
 
