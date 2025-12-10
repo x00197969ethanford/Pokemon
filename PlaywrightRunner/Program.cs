@@ -20,7 +20,7 @@ await page.GetByText("Search Pokémon").ClickAsync();
 await page.GetByText("Find Your Pokémon Twin").ClickAsync();
 await page.GetByRole(AriaRole.Article).GetByText("Top Pokémon").ClickAsync();
 await page.GetByRole(AriaRole.Link, new() { Name = "Discover" }).ClickAsync();
-await page.GetByRole(AriaRole.Heading, new() { Name = "Top 10 Pokémon" }).ClickAsync();
+await page.GetByRole(AriaRole.Heading, new() { Name = "Top Pokémon" }).ClickAsync();
 await page.GetByRole(AriaRole.Link, new() { Name = "Pokemon Project" }).ClickAsync();
 await page.GetByRole(AriaRole.Link, new() { Name = "Find Match" }).ClickAsync();
 await page.GetByRole(AriaRole.Heading, new() { Name = "Find Your Pokémon Twin" }).ClickAsync();
