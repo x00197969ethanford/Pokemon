@@ -11,22 +11,26 @@
     <div class="row g-2">
         <div class="col-6 col-md-3">
             <label>Min HP</label>
-            <InputNumber @bind-Value="minHp" class="form-control" min="0" max="9999" />
+            <InputNumber @bind-Value="minHp" class="form-control" 
+                oninput="this.value = Math.min(Math.max(this.value, 0), 9999)" />
         </div>
 
         <div class="col-6 col-md-3">
             <label>Min Attack</label>
-            <InputNumber @bind-Value="minAttack" class="form-control" min="0" max="9999"/>
+            <InputNumber @bind-Value="minAttack" class="form-control" 
+                oninput="this.value = Math.min(Math.max(this.value, 0), 9999)"/>
         </div>
 
         <div class="col-6 col-md-3">
             <label>Min Defense</label>
-            <InputNumber @bind-Value="minDefense" class="form-control" min="0" max="9999"/>
+            <InputNumber @bind-Value="minDefense" class="form-control" 
+                oninput="this.value = Math.min(Math.max(this.value, 0), 9999)"/>
         </div>
 
         <div class="col-6 col-md-3">
             <label>Min Speed</label>
-            <InputNumber @bind-Value="minSpeed" class="form-control" min="0" max="9999"/>
+            <InputNumber @bind-Value="minSpeed" class="form-control"
+                oninput="this.value = Math.min(Math.max(this.value, 0), 9999)" />
         </div>
     </div>
 
