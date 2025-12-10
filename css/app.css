@@ -163,6 +163,18 @@ code {
     margin-right: auto;
 }
 
+a.link-blue {
+    color: #0d6efd !important;      
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+a.link-blue:hover {
+    color: #0a58ca !important;       
+}
+
+
+
 /* home page */
 
 .home-card {
