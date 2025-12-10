@@ -31,7 +31,15 @@
 
     <div class="mt-3">
         <label><strong>Sort by:</strong></label>
-
+        <select class="form-select w-auto d-inline-block" @bind="sortBy">
+            <option value="name">Name</option>
+            <option value="hp">HP</option>
+            <option value="attack">Attack</option>
+            <option value="defense">Defense</option>
+            <option value="speed">Speed</option>
+            <option value="weight">Weight</option>
+            <option value="height">Height</option>
+        </select>
     </div>
 </div>
 
@@ -42,4 +50,6 @@
     int minAttack = 0;
     int minDefense = 0;
     int minSpeed = 0;
+
+    string sortBy = "hp";
 }
