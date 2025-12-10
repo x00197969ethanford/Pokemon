@@ -38,8 +38,16 @@
             <option value="defense">Defense</option>
             <option value="speed">Speed</option>
             <option value="weight">Weight</option>
-            <option value="height">Height</option>
+            <option value="height">Height</option>    
         </select>
+        
+        <button class="btn btn-secondary ms-2" @onclick="ToggleSort">
+            @(sortAsc ? "Ascending ↑" : "Descending ↓")
+        </button>
+        
+        <button class="btn btn-primary ms-3" @onclick="ApplyFilters">
+            Apply Filters 
+        </button>
     </div>
 </div>
 
@@ -71,10 +79,10 @@
         return 0;
     }
 
-    void ToggleSort() 
-    { 
-        sortAsc = !sortAsc; 
-        ApplyFilters(); 
+    void ToggleSort()
+    {
+        sortAsc = !sortAsc;
+        ApplyFilters();
     }
 
     void ApplyFilters()
@@ -93,10 +101,10 @@
     IEnumerable<Pokemon> FilterByStats(IEnumerable<Pokemon> list)
     {
         return list.Where(p =>
-            Stat(p, statName: "hp") >= minHp &&
-            Stat(p, statName: "attack") >= minAttack &&
-            Stat(p, statName: "defense") >= minDefense &&
-            Stat(p, statName: "speed") >= minSpeed
+        Stat(p, statName: "hp") >= minHp &&
+        Stat(p, statName: "attack") >= minAttack &&
+        Stat(p, statName: "defense") >= minDefense &&
+        Stat(p, statName: "speed") >= minSpeed
         );
     }
 
@@ -106,13 +114,16 @@
             return sortAsc ? list.OrderBy(p => Stat(p, statName: "hp")) : list.OrderByDescending(p => Stat(p, statName: "hp"));
 
         if (sortBy == "attack")
-            return sortAsc ? list.OrderBy(p => Stat(p, statName: "attack")) : list.OrderByDescending(p => Stat(p, statName: "attack"));
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "attack")) : list.OrderByDescending(p => Stat(p, statName:
+            "attack"));
 
         if (sortBy == "defense")
-            return sortAsc ? list.OrderBy(p => Stat(p, statName: "defense")) : list.OrderByDescending(p => Stat(p, statName: "defense"));
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "defense")) : list.OrderByDescending(p => Stat(p, statName:
+            "defense"));
 
         if (sortBy == "speed")
-            return sortAsc ? list.OrderBy(p => Stat(p, statName: "speed")) : list.OrderByDescending(p => Stat(p, statName: "speed"));
+            return sortAsc ? list.OrderBy(p => Stat(p, statName: "speed")) : list.OrderByDescending(p => Stat(p, statName:
+            "speed"));
 
         if (sortBy == "height")
             return sortAsc ? list.OrderBy(p => p.Height) : list.OrderByDescending(p => p.Height);
