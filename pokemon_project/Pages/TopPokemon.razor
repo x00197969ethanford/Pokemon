@@ -88,6 +88,13 @@ else
     string sortBy = "hp";
     bool sortAsc = false; // best first
 
+    protected override async Task OnInitializedAsync()
+    {
+        all = await PokemonService.GetManyPokemonAsync(count: 898); // was 100 for testing
+        ApplyFilters();
+        isLoading = false;
+    }
+
     int Stat(Pokemon p, string statName)
     {
         foreach (PokemonStat data in p.Stats)
