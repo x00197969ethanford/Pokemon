@@ -71,6 +71,19 @@
         return 0;
     }
 
+    void ApplyFilters()
+    {
+        IEnumerable<Pokemon> result = all;
+
+        result = FilterByStats(result);
+
+        result = SortResults(result);
+
+        filtered = result.Take(count: 12).ToList();
+
+        StateHasChanged();
+    }
+
     IEnumerable<Pokemon> FilterByStats(IEnumerable<Pokemon> list)
     {
         return list.Where(p =>
