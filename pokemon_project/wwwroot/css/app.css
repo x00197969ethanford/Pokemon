@@ -156,6 +156,13 @@ code {
     max-width: 330px !important;
 }
 
+.match-card {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* home page */
 
 .home-card {
