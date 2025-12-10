@@ -19,7 +19,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
 
     # issue with deployed urls
     - name: Patch base href for GitHub Pages
@@ -39,3 +39,11 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: release/wwwroot
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright tests
+      env:
+        TEST_URL: "https://ethandunne02.github.io/Pokemon/"
+      run: dotnet run --project PlaywrightRunner

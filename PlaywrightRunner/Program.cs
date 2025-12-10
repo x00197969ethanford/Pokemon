@@ -14,7 +14,7 @@ var page = await context.NewPageAsync();
 page.SetDefaultTimeout(200000);
 page.SetDefaultNavigationTimeout(200000); // for some reason match loading is slow
 
-await page.GotoAsync("http://localhost:5136/");
+await page.GotoAsync("https://x00197969ethanford.github.io/Pokemon/");
 await page.GetByText("Pokémon Project").ClickAsync();
 await page.GetByText("Search Pokémon").ClickAsync();
 await page.GetByText("Find Your Pokémon Twin").ClickAsync();
