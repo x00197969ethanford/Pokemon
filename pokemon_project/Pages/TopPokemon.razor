@@ -57,6 +57,18 @@
     int minSpeed = 0;
 
     string sortBy = "hp";
-    bool sortAsc;
+    bool sortAsc; 
+
+    int Stat(Pokemon p, string statName)
+    {
+        foreach (PokemonStat data in p.Stats)
+        {
+            if (data.Stat.Name == statName)
+            {
+                return data.BaseStat;
+            }
+        }
+        return 0;
+    }
 
 }
