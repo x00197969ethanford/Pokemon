@@ -14,9 +14,9 @@
         @Card(title: "Search Pokémon",
               description: "Look up stats, types, abilities, and sprites for any Pokémon.",
               pikachuImg,
-              href: "",
+              href: "/pokemon",
               Color.Primary,
-              buttonText: "")
+              buttonText: "Start Searching")
 
 
     </MudGrid>
@@ -40,6 +40,11 @@
                     <MudText Typo="Typo.h6" Class="mb-1">@title</MudText>
                     <MudText Typo="Typo.body2">@description</MudText>
                 </MudCardContent>
+                <MudCardActions Class="pb-3 ps-3">
+                    <MudButton Color="@color" Variant="Variant.Filled" Href="@href">
+                        @buttonText
+                    </MudButton>
+                </MudCardActions>
             </MudCard>
         </MudItem>;
     };
