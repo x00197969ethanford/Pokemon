@@ -9,6 +9,7 @@ namespace pokemon_project.Data
 
         private List<Pokemon>? _cachedPokemon;
         private readonly SemaphoreSlim _loadLock = new(1, 1);
+        private static readonly Random _random = new();
 
         public PokemonService(HttpClient http)
         {
@@ -38,7 +39,7 @@ namespace pokemon_project.Data
 
         public int GetRandomId()
         {
-            return new Random().Next(1, 898); // There are 898 pokemon
+            return _random.Next(1, 898); // There are 898 pokemon
         }
 
         public async Task<List<Pokemon>> GetManyPokemonAsync(int count = 898)
@@ -86,22 +87,45 @@ namespace pokemon_project.Data
                 double userHeightCm,
                 double userWeightKg)
         {
-            var maches = pokemons.Select(match =>
+            (Pokemon match, double score)? first = null;
+            (Pokemon match, double score)? second = null;
+            (Pokemon match, double score)? third = null;
+
+            foreach (var p in pokemons)
             {
-                double pokeHeight = match.Height * 10; // cm
-                double pokeWeight = match.Weight / 10.0; // kg
+                double pokeHeight = p.Height * 10;
+                double pokeWeight = p.Weight / 10.0;
 
-                double score = Math.Abs(userHeightCm - pokeHeight) +
-                               Math.Abs(userWeightKg - pokeWeight);
+                double score =
+                    Math.Abs(userHeightCm - pokeHeight) +
+                    Math.Abs(userWeightKg - pokeWeight);
 
-                return (match, score);
+                if (first == null || score < first.Value.score)
+                {
+                    third = second;
+                    second = first;
+                    first = (p, score);
+                }
+                else if (second == null || score < second.Value.score)
+                {
+                    third = second;
+                    second = (p, score);
+                }
+                else if (third == null || score < third.Value.score)
+                {
+                    third = (p, score);
+                }
+            }
 
-            }).OrderBy(s => s.score).ToList();
-
-            var best = maches.First().match;
-            var top3 = maches.Take(3).ToList();
-
-            return (best, top3);
+            return (
+                first!.Value.match,
+                new List<(Pokemon match, double score)>
+                {
+                    first!.Value,
+                    second!.Value,
+                    third!.Value
+                }
+            );
         }
     }
 }
